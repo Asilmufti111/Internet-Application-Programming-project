@@ -1,0 +1,133 @@
+/* ========== Home Page Styles ========== */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Sets default font */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark gray text color */
+}
+
+/* Header Styling */
+#header {
+    background-color: #065535; /* Dark green background */
+    color: white; /* White text color */
+    text-align: center; /* Centers text */
+    padding: 20px; /* Adds space inside the header */
+}
+
+/* Navigation Bar Styling */
+#nav {
+    background-color: #034732; /* Darker green background */
+    padding: 10px; /* Adds space inside the navigation bar */
+    text-align: center; /* Centers navigation items */
+}
+
+/* Navigation Menu List */
+#nav ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes padding */
+}
+
+/* Navigation Items */
+#nav ul li {
+    display: inline; /* Displays items in a row */
+    margin: 0 15px; /* Adds space between menu items */
+}
+
+/* Navigation Links */
+#nav ul li a {
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 18px; /* Sets font size */
+}
+
+/* Hero Section (Main Banner) */
+#hero {
+    text-align: center; /* Centers text */
+    padding: 50px; /* Adds space inside */
+    background: url("../images/masjid.png") no-repeat center center/cover; /* Sets background image */
+    color: white; /* White text color */
+}
+
+/* Hero Section Title */
+#hero h2 {
+    font-size: 36px; /* Large text size */
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block; /* Allows padding and margin */
+    padding: 10px 20px; /* Adds space inside */
+    margin-top: 20px; /* Adds space above */
+    background-color: #2a6136; /* Green button color */
+    color: white; /* White text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounds button corners */
+}
+
+/* Main Content Section */
+#content {
+    padding: 20px; /* Adds space inside */
+    text-align: center; /* Centers text */
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #034732; /* Dark green background */
+    color: white; /* White text */
+    text-align: center; /* Centers text */
+    padding: 10px; /* Adds space inside */
+    margin-top: 20px; /* Adds space above */
+}
+
+/* ========== Schedule Page Styles ========== */
+
+/* Table Styling */
+table {
+    width: 80%; /* Sets table width */
+    margin: 20px auto; /* Centers table */
+    border-collapse: collapse; /* Merges table borders */
+}
+
+/* Table Headers and Data Cells */
+th, td {
+    padding: 12px; /* Adds space inside cells */
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: center; /* Centers text */
+}
+
+/* Table Header Styling */
+th {
+    background-color: #065535; /* Dark green background */
+    color: white; /* White text color */
+}
+
+/* Alternating Row Colors for Better Readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* ========== About Page Styles ========== */
+.content, .vision, .mission, .aims {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Apply Styling Only to About Page Titles */
+.section-title {
+    color: #065535;
+    text-align: center;
+}
+
+/* List Styling */
+.aims ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
