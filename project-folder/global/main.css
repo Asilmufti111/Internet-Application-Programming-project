@@ -1,6 +1,4 @@
-/* ========== Home Page Styles ========== */
-
-/* General Styles */
+/* ========== General Styles ========== */
 body {
     font-family: Arial, sans-serif; /* Sets default font */
     margin: 0; /* Removes default margin */
@@ -9,7 +7,7 @@ body {
     color: #333; /* Dark gray text color */
 }
 
-/* Header Styling */
+/* ========== Header Styling ========== */
 #header {
     background-color: #065535; /* Dark green background */
     color: white; /* White text color */
@@ -17,7 +15,7 @@ body {
     padding: 20px; /* Adds space inside the header */
 }
 
-/* Navigation Bar Styling */
+/* ========== Navigation Bar Styling ========== */
 #nav {
     background-color: #034732; /* Darker green background */
     padding: 10px; /* Adds space inside the navigation bar */
@@ -43,7 +41,7 @@ body {
     font-size: 18px; /* Sets font size */
 }
 
-/* Hero Section (Main Banner) */
+/* ========== Hero Section (Main Banner) ========== */
 #hero {
     text-align: center; /* Centers text */
     padding: 50px; /* Adds space inside */
@@ -67,13 +65,13 @@ body {
     border-radius: 5px; /* Rounds button corners */
 }
 
-/* Main Content Section */
+/* ========== Main Content Section ========== */
 #content {
     padding: 20px; /* Adds space inside */
     text-align: center; /* Centers text */
 }
 
-/* Footer Styling */
+/* ========== Footer Styling ========== */
 #footer {
     background-color: #034732; /* Dark green background */
     color: white; /* White text */
@@ -83,7 +81,6 @@ body {
 }
 
 /* ========== Schedule Page Styles ========== */
-
 /* Table Styling */
 table {
     width: 80%; /* Sets table width */
@@ -131,3 +128,138 @@ tr:nth-child(even) {
     margin-left: 20px;
 }
 
+  /* ========== Feedback Form Styling ========== */
+#feedback-form {
+    width: 60%; 
+    margin: 40px auto; /* Centers form container */
+    background: white; /* White background */
+    padding: 25px; /* Adds padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Enhances shadow effect */
+    border-radius: 5px; /*  more rounded corners */
+    text-align: center; /* Centers text inside */
+}
+
+/* Form Structure */
+form {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Centers form elements */
+    width: 100%;
+}
+
+/* Form Labels */
+label {
+    font-weight: bold; /* Makes labels bold */
+    margin-top: 12px; /* Adds space above labels */
+    align-self: flex-start; /* Aligns label text to left */
+    font-size: 16px; /* Improves readability */
+    color: #333; /* Darker color for contrast */
+}
+
+/* Input Fields & Textarea */
+input, textarea, select {
+    width: 100%; /* Makes fields full width */
+    padding: 12px; /* Adds padding */
+    margin: 6px 0; /* Adds margin */
+    border: 1px solid #bbb; /* darker border */
+    border-radius: 6px; /* More rounded corners */
+    font-size: 16px; /* Increases font size */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+/* Radio & Checkbox Groups */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /*  items to wrap */
+    gap: 15px;
+    justify-content: center;
+}
+
+.checkbox-group {
+    flex-direction: row; /* Aligns checkboxes horizontally */
+    align-items: center; /* Centers the checkboxes vertically */
+}
+
+.radio-group {
+    flex-direction: row; /* Aligns radio buttons horizontally */
+    align-items: center; /* Centers radio buttons vertically */
+}
+
+/* Adjust the space between each label */
+.checkbox-group label, .radio-group label {
+    margin-right: 20px; /* Adds space between items */
+}
+
+/* Input Fields & Textarea */
+input, textarea, select {
+    width: 100%; /* Makes fields full width */
+    padding: 12px; /* Adds padding */
+    margin: 6px 0; /* Adds margin */
+    border: 1px solid #bbb; /* Slightly darker border */
+    border-radius: 6px; /* More rounded corners */
+    font-size: 16px; /* Increases font size */
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Make checkbox labels appear horizontally */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Add space between User Preferences and Services Used */
+#feedback-form label + .checkbox-group {
+    margin-bottom: 50px; /* Adds space between Services Used and the previous section */
+}
+
+
+/* Submit Button */
+#feedback-form .btn {
+    display: inline-block; /* Allows padding and margin */
+    padding: 12px 25px; /* More padding for a larger button */
+    margin-top: 20px; /* Adds space above */
+    background-color: #2a6136; /* Green button color */
+    color: white; /* White text */
+    font-size: 18px; /* Increases font size */
+    border: none; /* Removes default border */
+    border-radius: 6px; /* Rounds corners */
+    cursor: pointer; /* Indicates clickable button */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover Effect for Button */
+#feedback-form .btn:hover {
+    background-color: #034732; /* Darker green on hover */
+}
+
+ /* Additional Styles for Services Page */
+ .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.service-box:hover {
+    transform: translateY(-5px);
+}
+.service-title {
+    color: #065535;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.service-description {
+    font-size: 16px;
+    color: #555;
+}
