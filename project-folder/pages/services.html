@@ -3,79 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback - IslamicPath</title>
+    <title>Our Services</title>
     <link rel="stylesheet" href="../global/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <div id="header">
-        <h1>Feedback</h1>
-        <p>We value your feedback! Let us know how we can improve.</p>
-    </div>
+
+    <header id="header">
+        <h1>Our Services</h1>
+    </header>
 
     <!-- Navigation Menu -->
-    <div id="nav">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="schedule.html">Prayer Schedule</a></li>
-            <li><a href="video.html">Videos</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-        </ul>
-    </div>
+<!-- Navigation Menu -->
+<div id="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li> <!-- Link to Home Page -->
+        <li><a href="pages/about.html">About</a></li> <!-- Link to About Page -->
+        <li><a href="pages/services.html">Services</a></li> <!-- Link to Services Page -->
+        <li><a href="pages/schedule.html">Prayer Schedule</a></li> <!-- Link to Prayer Schedule Page -->
+        <li><a href="pages/video.html">Videos</a></li> <!-- Link to Videos Page -->
+        <li><a href="pages/feedback.html">Feedback</a></li> <!-- Link to Feedback Page -->
+        <li><a href="pages/Donations.html">Donations</a></li> <!-- Link to Donations Page -->
+    </ul>
+</div>
 
-    <!-- Feedback Form Section -->
-    <div id="content">
-        <div id="feedback-form">
-            <h2>Share Your Thoughts</h2>
-            <form action="../server/process_feedback.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@example.com" required>
-                
-                <label for="message">Your Feedback:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <!-- User Rating (Radio Buttons) -->
-                <label>User Rating:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="rating" value="Good" required> Good</label>
-                    <label><input type="radio" name="rating" value="Average"> Average</label>
-                    <label><input type="radio" name="rating" value="Poor"> Poor</label>
-                </div>
-                
-                <!-- Services Selection (Checkboxes) -->
-                <label>Services You Are Interested In:</label>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="services[]" value="Quran and Tafsir"> Quran and Tafsir</label>
-                    <label><input type="checkbox" name="services[]" value="Prayer Schedule"> Prayer Schedule</label>
-                    <label><input type="checkbox" name="services[]" value="Quizzes to test knowledge"> Quizzes to test knowledge</label>
-                    <label><input type="checkbox" name="services[]" value="Donation Sites"> Donation Sites</label>
-                </div>
 
-                <!-- User Preferences (Dropdown Menu) -->
-                <label for="preferences">User Preferences:</label>
-                <select id="preferences" name="preferences" required>
-                    <option value="email-updates">Email Updates</option>
-                    <option value="sms-updates">SMS Updates</option>
-                    <option value="newsletter">Newsletter Subscription</option>
-                </select>
-                
-                <label for="additional-comments">Additional Comments:</label>
-                <textarea id="additional-comments" name="additional-comments" rows="4"></textarea>
-                
-                <button type="submit" class="btn">Submit</button>
-            </form>
+
+    <section class="services-container">
+        <div class="service-box">
+            <h2 class="service-title">Quran and Tafsir</h2>
+            <p class="service-description">Explore the Quran with Tafsir to gain deeper understanding.</p>
         </div>
-    </div>
 
-    <!-- Footer Section -->
-    <div id="footer">
-        <p>&copy; 2025 IslamicPath. All rights reserved.</p>
-    </div>
+        <div class="service-box">
+            <h2 class="service-title">Prayer Schedule</h2>
+            <p class="service-description">Stay updated with accurate prayer times for your region.</p>
+        </div>
+
+        <div class="service-box">
+            <h2 class="service-title">Quizzes to Test Knowledge</h2>
+            <p class="service-description">Engage in fun and educational quizzes to test your knowledge.</p>
+        </div>
+
+        <div class="service-box">
+            <h2 class="service-title">Donation</h2>
+            <p class="service-description">Find trusted donation websites in Saudi Arabia.</p>
+        </div>
+
+        <div class="service-box">
+            <h2 class="service-title">Useful Videos</h2>
+            <p class="service-description">Watch informative and beneficial videos.</p>
+        </div>
+    </section>
+
 </body>
 </html>
