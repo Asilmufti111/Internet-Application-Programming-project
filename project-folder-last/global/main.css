@@ -256,34 +256,48 @@ input, textarea, select {
     background-color: #034732; /* Darker green on hover */
 }
 
- /* Additional Styles for Services Page */
- .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
+/* ========== Services page ========== */
+ /* This is the main container for all the service boxes */
+.services-container {
+    display: flex; /* Puts the boxes in a row */
+    flex-wrap: wrap; /* Moves boxes to a new line if there’s not enough space */
+    justify-content: center; /* Centers the boxes on the page */
+    gap: 20px; /* Adds space between the boxes */
+    padding: 50px; /* Adds space around the whole section */
 }
+
+/* This styles each individual service box */
 .service-box {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    background: white; /* Makes the box background white */
+    padding: 20px; /* Adds space inside the box */
+    border-radius: 8px; /* Rounds the corners of the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a light shadow for a 3D effect */
+    width: 300px; /* Sets the width of each box */
+    text-align: center; /* Centers the text inside the box */
+    transition: transform 0.3s ease-in-out; /* Makes animations smooth */
 }
+
+/* When the user hovers over a service box */
 .service-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Moves the box slightly up */
 }
+
+/* This styles the service title (like "Prayer Schedule") */
 .service-title {
-    color: #065535;
-    font-size: 20px;
-    margin-bottom: 10px;
+    color: #065535; /* Sets the text color to dark green */
+    font-size: 20px; /* Makes the title larger */
+    margin-bottom: 10px; /* Adds space below the title */
 }
+
+/* This styles the service description (small text under the title) */
 .service-description {
-    font-size: 16px;
-    color: #555;
+    font-size: 16px; /* Sets the text size */
+    color: #555; /* Makes the text a little gray for better readability */
+}
+
+.services-page a {
+    color: inherit; /* Inherits the text color from its parent element */
+    text-decoration: none; /* Removes the underline */
 }
 
 
