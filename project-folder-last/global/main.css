@@ -145,8 +145,7 @@ tr:nth-child(even) {
 }
 
 /* List Styling */
-.aims ul {
-    list-style-type: square;
+.aims ol {
     margin-left: 20px;
 }
 
