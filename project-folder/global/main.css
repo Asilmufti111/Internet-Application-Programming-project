@@ -310,7 +310,50 @@ input, textarea, select {
     flex-grow: 1; 
     margin-bottom: 15px;
 }
+/* ========== Video Page Styles ========== */
+.video-container {
+    margin: 20px auto; /* Centers and adds spacing between videos */
+    width: 560px; /* Matches iframe width */
+    max-width: 100%; /* Ensures responsiveness */
+    text-align: center; /* Centers contents */
+}
 
+.video-container iframe {
+    display: block; /* Removes inline spacing issues */
+    margin: 0 auto; /* Centers iframe */
+    width: 100%; /* Makes iframe responsive within container */
+    height: auto; /* Maintains aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensures proper video aspect ratio */
+}
+
+.video-desc {
+    font-size: 14px; /* Readable size */
+    color: #555; /* Slightly lighter text */
+    margin-top: 10px; /* Spacing above description */
+}
+
+.video-container button {
+    margin-top: 10px; /* Spacing above button */
+    padding: 8px 16px; /* Comfortable size */
+    background-color: #2a6136; /* Matches .btn green */
+    color: white; /* White text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicates clickable */
+    transition: background 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.video-container button:hover {
+    background-color: #034732; /* Darker green on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .video-container {
+        width: 100%; /* Full width on small screens */
+        padding: 0 10px; /* Adds side padding */
+    }
+}
 
 /* ========== Footer ========== */
 #footer {
