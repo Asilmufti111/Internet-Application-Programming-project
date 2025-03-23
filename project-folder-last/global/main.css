@@ -347,13 +347,6 @@ input, textarea, select {
 }
 
 
-/* ========== Footer ========== */
-#footer {
-    background-color: #034732;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-}
 /* Quran & Tafsir Page Styling */
 .quran-section, .tafsir-section, .recitation-section {
     width: 80%;
