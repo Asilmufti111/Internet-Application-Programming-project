@@ -56,13 +56,19 @@ body {
 
 /* Button Styling */
 .btn {
-    display: inline-block; /* Allows padding and margin */
-    padding: 10px 20px; /* Adds space inside */
-    margin-top: 20px; /* Adds space above */
-    background-color: #2a6136; /* Green button color */
-    color: white; /* White text */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px; /* Rounds button corners */
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #2a6136; /* Green */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+.btn:hover {
+    background-color: #034732; /* Darker green on hover */
 }
 
 /* ========== Main Content Section ========== */
