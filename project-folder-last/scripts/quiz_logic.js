@@ -1,22 +1,24 @@
 let score = 0;
+let answeredQuestions = new Map();
+let emailValidated = false;
 
-// Called when user selects an answer
+// Show selected only (not result)
 function checkAnswer(button, status) {
-  if (status === 'correct') {
-    score++;
-    button.style.backgroundColor = "green";
-  } else {
-    button.style.backgroundColor = "red";
+  const questionDiv = button.closest(".quiz");
+
+  if (!answeredQuestions.has(questionDiv)) {
+    answeredQuestions.set(questionDiv, { button, status });
+
+    // Show selected button visually
+    button.style.border = "2px solid #333";
+    button.style.backgroundColor = "#ddd";
   }
 
-  // Disable all buttons for this question
-  button.parentElement.querySelectorAll('button').forEach(btn => btn.disabled = true);
-
-  // Show score so far
-  document.getElementById("quiz-result").innerText = "Your score: " + score + "/3";
+  questionDiv.querySelectorAll("button").forEach(btn => btn.disabled = true);
 }
 
-// Called when user clicks "Start Quiz"
+
+// Called when user starts quiz
 function startQuiz() {
   const emailInput = document.getElementById("quizEmail").value.trim();
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -26,19 +28,54 @@ function startQuiz() {
     return;
   }
 
-  // Lock input and show quiz
-  document.getElementById("quizEmail").disabled = true;
-  document.querySelector("button[onclick='startQuiz()']").style.display = "none";
-  document.getElementById("quizContent").style.display = "block";
+  // Check for previous quiz score
+  const params = new URLSearchParams();
+  params.append("email", emailInput);
+
+  fetch("../api/check_previous_score.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: params.toString()
+  })
+    .then(res => res.text())
+    .then(text => {
+      if (text.trim().startsWith("score:")) {
+        const prevScore = text.split(":")[1];
+        document.getElementById("previous-score").innerText = "Previous score: " + prevScore;
+      } else {
+        document.getElementById("previous-score").innerText = ""; // clear if no previous score
+      }
+
+      // Enable quiz
+      emailValidated = true;
+      document.getElementById("quizEmail").disabled = true;
+      document.querySelector("button[onclick='startQuiz()']").style.display = "none";
+      document.getElementById("quizContent").style.display = "block";
+    })
+    .catch(() => {
+      alert("Failed to check previous score.");
+    });
 }
 
-// Called when user clicks "Submit My Score"
+
 function submitResult() {
   const email = document.getElementById("quizEmail").value.trim();
-  if (!email) {
-    alert("Email missing. Cannot submit result.");
+  if (!emailValidated) {
+    alert("Please enter your email and start the quiz first.");
     return;
   }
 
-  submitQuizScore(email); // from submit_score.js
+  score = 0;
+
+  answeredQuestions.forEach(({ button, status }) => {
+    if (status === 'correct') {
+      score++;
+      button.style.backgroundColor = "green";
+    } else {
+      button.style.backgroundColor = "red";
+    }
+  });
+
+  document.getElementById("quiz-result").innerText = "Your score: " + score + "/3";
+  submitQuizScore(email);
 }
