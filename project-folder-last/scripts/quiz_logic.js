@@ -32,7 +32,7 @@ function startQuiz() {
   const params = new URLSearchParams();
   params.append("email", emailInput);
 
-  fetch("../api/check_previous_score.php", {
+  fetch("../server/check_previous_score.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: params.toString()
