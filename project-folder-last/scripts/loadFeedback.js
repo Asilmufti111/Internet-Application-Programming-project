@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    fetch('/api/feedback.php')
+    fetch('api/process_feedback.php')
         .then(response => response.json())
         .then(data => {
             feedbackData = data.filter(entry => entry.comments && entry.comments.trim() !== '');
