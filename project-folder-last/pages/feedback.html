@@ -7,7 +7,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+<script src="../scripts/validation.js"></script>
+<script src="../scripts/POST.js"></script>
 <head>
     <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
@@ -21,6 +22,7 @@
     <!-- FontAwesome for icons -->
 
 </head>
+
 
 <body>
 
@@ -46,55 +48,66 @@
             <h2>Share Your Thoughts</h2> <!-- Heading for the feedback form -->
 
             <!-- The form collects user information, ratings, preferences, and additional comments -->
-            <form action="../server/process_feedback.php" method="post">
+            <form id="feedback">
 
-                <!-- User Name Input -->
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required> <!-- Input field for the user's name -->
+                <!-- Section 1: Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend> <!-- Title for this section -->
 
-                <!-- User Email Input -->
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@example.com" required>
-                <!-- Input field for email -->
+                    <!-- User Name Input -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required> <!-- Input field for the user's name -->
 
-                <!-- User Rating: Options to rate the website -->
-                <label>User Rating:</label>
-                <div class="radio-group">
-                    <label><input type="radio" name="rating" value="Good"> Good</label>
-                    <!-- Radio button for 'Good' rating -->
-                    <label><input type="radio" name="rating" value="Average"> Average</label>
-                    <!-- Radio button for 'Average' rating -->
-                    <label><input type="radio" name="rating" value="Poor"> Poor</label>
-                    <!-- Radio button for 'Poor' rating -->
-                </div>
+                    <!-- User Email Input -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                    <!-- Input field for email -->
+                </fieldset>
 
-                <!-- Services Used: Options to select which services were used -->
-                <label>Services Used:</label>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" name="services[]" value="Quran and Tafsir"> Quran and Tafsir</label>
-                    <!-- Checkbox for Quran and Tafsir -->
-                    <label><input type="checkbox" name="services[]" value="Prayer Schedule"> Prayer Schedule</label>
-                    <!-- Checkbox for Prayer Schedule -->
-                    <label><input type="checkbox" name="services[]" value="Quizzes to test knowledge"> Quizzes to test
-                        knowledge</label> <!-- Checkbox for Quizzes -->
-                    <label><input type="checkbox" name="services[]" value="Donation Sites"> Donation Sites</label>
-                    <!-- Checkbox for Donation Sites -->
-                </div>
+                <!-- Section 2: Feedback Details -->
+                <fieldset>
+                    <legend>Feedback Details</legend> <!-- Title for this section -->
 
-                <!-- Preferred Service: Dropdown list to choose the preferred service -->
-                <label for="preferences">Preferred service:</label>
-                <select id="preferences" name="preferences">
-                    <option value="Quran and Tafsir">Quran and Tafsir</option> <!-- Option for Quran and Tafsir -->
-                    <option value="Prayer Schedule">Prayer Schedule</option> <!-- Option for Prayer Schedule -->
-                    <option value="Quizzes to Test Knowledge">Quizzes to Test Knowledge</option><!-- Option for Quizzes -->
-                    <option value="Donation">Donation</option> <!-- Option for Donation -->
-                    <option value="Useful Videos">Useful Videos</option> <!-- Option for Useful Videos -->
-                </select>
+                    <!-- User Rating: Options to rate the website -->
+                    <label>User Rating:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="rating" value="Good"> Good</label>
+                        <!-- Radio button for 'Good' rating -->
+                        <label><input type="radio" name="rating" value="Average"> Average</label>
+                        <!-- Radio button for 'Average' rating -->
+                        <label><input type="radio" name="rating" value="Poor"> Poor</label>
+                        <!-- Radio button for 'Poor' rating -->
+                    </div>
 
-                <!-- Additional Comments: Text area for any extra comments or suggestions -->
-                <label for="message">Additional Comments:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <!-- Textarea for additional comments -->
+                    <!-- Services Used: Options to select which services were used -->
+                    <label>Services Used:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="services[]" value="Quran and Tafsir"> Quran and Tafsir</label>
+                        <!-- Checkbox for Quran and Tafsir -->
+                        <label><input type="checkbox" name="services[]" value="Prayer Schedule"> Prayer Schedule</label>
+                        <!-- Checkbox for Prayer Schedule -->
+                        <label><input type="checkbox" name="services[]" value="Quizzes to test knowledge"> Quizzes to test
+                            knowledge</label> <!-- Checkbox for Quizzes -->
+                        <label><input type="checkbox" name="services[]" value="Donation Sites"> Donation Sites</label>
+                        <!-- Checkbox for Donation Sites -->
+                    </div>
+
+                    <!-- Preferred Service: Dropdown list to choose the preferred service -->
+                    <label for="preferences">Preferred service:</label>
+                    <select id="preferences" name="preferences">
+                        <option value="Quran and Tafsir">Quran and Tafsir</option> <!-- Option for Quran and Tafsir -->
+                        <option value="Prayer Schedule">Prayer Schedule</option> <!-- Option for Prayer Schedule -->
+                        <option value="Quizzes to Test Knowledge">Quizzes to Test Knowledge</option>
+                        <!-- Option for Quizzes -->
+                        <option value="Donation">Donation</option> <!-- Option for Donation -->
+                        <option value="Useful Videos">Useful Videos</option> <!-- Option for Useful Videos -->
+                    </select>
+
+                    <!-- Additional Comments: Text area for any extra comments or suggestions -->
+                    <label for="message"><br> Additional Comments:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <!-- Textarea for additional comments -->
+                </fieldset>
 
                 <!-- Submit Button: Submits the form -->
                 <button type="submit" class="btn">Submit</button>
