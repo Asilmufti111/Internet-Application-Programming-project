@@ -39,33 +39,49 @@
     <div id="content">
         <h2>Today's Prayer Timings</h2>
 
-        <!-- Prayer Schedule Table -->
-        <table id="schedule-table">
-            <tr>
-                <th>Prayer</th> <!-- Table Header for Prayer Name -->
-                <th>Time</th> <!-- Table Header for Prayer Time -->
-            </tr>
-            <tr>
-                <td>Fajr</td> <!-- Fajr Prayer -->
-                <td>5:00 AM</td>
-            </tr>
-            <tr>
-                <td>Dhuhr</td> <!-- Dhuhr Prayer -->
-                <td>12:30 PM</td>
-            </tr>
-            <tr>
-                <td>Asr</td> <!-- Asr Prayer -->
-                <td>4:00 PM</td>
-            </tr>
-            <tr>
-                <td>Maghrib</td> <!-- Maghrib Prayer -->
-                <td>6:15 PM</td>
-            </tr>
-            <tr>
-                <td>Isha</td> <!-- Isha Prayer -->
-                <td>8:00 PM</td>
-            </tr>
-        </table>
+<!-- Dropdown for city selection -->
+<label for="city">Select City:</label>
+<select id="city">
+  <option value="Jeddah">Jeddah</option>
+  <option value="Makkah">Makkah</option>
+<option value="Riyadh" selected>Riyadh</option>
+  <option value="Dammam">Dammam</option>
+  <option value="Medina">Medina</option>
+  <option value="Abha">Abha</option>
+  <option value="Tabuk">Tabuk</option>
+  <option value="Hail">Hail</option>
+  <option value="Al Khobar">Al Khobar</option>
+  <option value="Al Baha">Al Baha</option>
+</select>
+
+<table id="schedule-table">
+  <thead>
+    <tr>
+      <th colspan="3">Daily Prayer Schedule</th>
+    </tr>
+    <tr>
+      <th>Recitation</th>
+      <th>Prayer</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody id="schedule-body">
+    <!-- JS will inject rows here -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3" style="text-align:center; font-style:italic;">
+       NOTE: Times are based on your selected city.
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+
+<!-- Link to external JavaScript file -->
+<script src="../scripts/prayer-times.js"></script>
+
+
     </div>
     
    <!-- Footer Section -->
