@@ -491,7 +491,7 @@ iframe {
 }
 
 #feedback-slider button {
-    background-color: #007B7F;
+    background-color: #034732;
     color: white;
     border: none;
     font-size: 24px;
@@ -502,7 +502,7 @@ iframe {
 }
 
 #feedback-slider button:hover {
-    background-color: #005f61;
+    background-color: #034732;
 }
 
 
