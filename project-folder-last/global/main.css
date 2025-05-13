@@ -150,15 +150,6 @@ tr:nth-child(even) {
 }
 
   /* ========== Feedback Form Styling ========== */
-#feedback-form {
-    width: 60%; 
-    margin: 40px auto; /* Centers form container */
-    background: white; /* White background */
-    padding: 25px; /* Adds padding */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Enhances shadow effect */
-    border-radius: 5px; /*  more rounded corners */
-    text-align: center; /* Centers text inside */
-}
 
 /* Form Structure */
 form {
@@ -214,7 +205,7 @@ input, textarea, select {
 
 /* Input Fields & Textarea */
 input, textarea, select {
-    width: 100%; /* Makes fields full width */
+    width: 90%; /* Makes fields full width */
     padding: 12px; /* Adds padding */
     margin: 6px 0; /* Adds margin */
     border: 1px solid #bbb; /* Slightly darker border */
@@ -253,6 +244,26 @@ input, textarea, select {
 /* Hover Effect for Button */
 #feedback-form .btn:hover {
     background-color: #034732; /* Darker green on hover */
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+  box-sizing: border-box;
+  
+    direction: ltr;
+    text-align: left;
+  
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #444;
 }
 
 /* ========== Services page ========== */
