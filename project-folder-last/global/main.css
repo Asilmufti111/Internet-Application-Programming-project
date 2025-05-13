@@ -466,6 +466,46 @@ iframe {
 }
 
 
+/*feedback section in the home page*/
+#feedback-slider-container {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#feedback-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#feedback-content {
+    max-width: 400px;
+    min-height: 100px;
+    text-align: left;
+}
+
+#feedback-slider button {
+    background-color: #007B7F;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedback-slider button:hover {
+    background-color: #005f61;
+}
+
+
 
 
 
