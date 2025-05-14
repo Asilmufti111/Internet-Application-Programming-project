@@ -210,6 +210,11 @@ form {
     width: 100%;
 }
 
+#feedback-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
 /* Form Labels */
 label {
     font-weight: bold; /* Makes labels bold */
