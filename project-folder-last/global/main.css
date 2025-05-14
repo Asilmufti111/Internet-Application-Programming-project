@@ -6,6 +6,11 @@ body {
     background-color: #f8f9fa; /* Light gray background */
     color: #333; /* Dark gray text color */
 }
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
 
 /* ========== Header Styling ========== */
 #header {
@@ -208,12 +213,6 @@ form {
     flex-direction: column; /* Align items in a column */
     align-items: center; /* Centers form elements */
     width: 100%;
-}
-
-#feedback-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2rem;
 }
 /* Form Labels */
 label {
