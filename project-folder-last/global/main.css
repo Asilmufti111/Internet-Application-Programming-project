@@ -183,6 +183,21 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2; /* Light gray background for even rows */
 }
+/* Center the whole section and limit width */
+#city-container {
+    width: 80%;  /* Match your table's width */
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Adjust the select box */
+#city {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
 
 /* ========== About Page Styles ========== */
 .content, .vision, .mission, .aims {
