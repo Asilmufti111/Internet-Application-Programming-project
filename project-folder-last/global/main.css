@@ -71,10 +71,55 @@ body {
     background-color: #034732; /* Darker green on hover */
 }
 
-/* ========== Main Content Section ========== */
-#content {
-    padding: 20px; /* Adds space inside */
-    text-align: center; /* Centers text */
+
+/*feedback section in the home page*/
+#feedback-slider-container {
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#feedback-slider-container h3 {
+    font-size: 24px; /* Readable size */
+    margin-bottom: 20px;
+   color: #065535;
+    text-align: center;
+}
+#feedback-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#feedback-content {
+    max-width: 400px;
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px; /* Readable size */
+
+}
+
+#feedback-slider button {
+    background-color: #034732;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#feedback-slider button:hover {
+    background-color: #034732;
 }
 
 /* ========== Footer Styling ========== */
@@ -481,49 +526,6 @@ iframe {
         padding: 0 10px; /* Adds side padding */
     }
 }
-
-
-/*feedback section in the home page*/
-#feedback-slider-container {
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 600px;
-    background-color: #f9f9f9;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#feedback-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-#feedback-content {
-    max-width: 400px;
-    min-height: 100px;
-    text-align: left;
-}
-
-#feedback-slider button {
-    background-color: #034732;
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#feedback-slider button:hover {
-    background-color: #034732;
-}
-
-
-
 
 
 
