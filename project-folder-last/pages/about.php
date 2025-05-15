@@ -19,7 +19,7 @@
 <body>
 
     <?php include("../includes/header.php"); ?>
-    <?php include("../includes/nav.php"); ?>
+    <?php include("../includes/links.php"); ?>
 
     <section class="content">
         <h2 class="section-title">Who We Are</h2>
