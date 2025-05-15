@@ -1,6 +1,6 @@
 <div id="footer">
     <div class="footer-left">
-        <p>© <?php echo date("Y"); ?>  Al-Noor. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?>  Al-Noor. All rights reserved.</p>
     </div>
     <div class="footer-right">
         <address>
