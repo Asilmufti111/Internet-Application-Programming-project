@@ -24,7 +24,7 @@
     <?php include('../includes/header.php'); ?>
 
     <!-- Include navigation -->
-    <?php include('../includes/nav.php'); ?>
+    <?php include('../includes/links.php'); ?>
 
     <!-- Content Section -->
     <div id="content">
