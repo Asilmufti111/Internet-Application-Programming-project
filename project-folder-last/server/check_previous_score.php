@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Database configuration
 $host = "srv504.hstgr.io";
 $dbname = "u307889669_alnoor";
@@ -22,7 +22,7 @@ if (empty($email)) {
 }
 
 // Query the latest score by ID DESC
-$stmt = $conn->prepare("SELECT score FROM quiz_results WHERE email = ? ORDER BY id DESC LIMIT 1");
+$stmt = $conn->prepare("SELECT score FROM quiz_results WHERE email = ? ");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->bind_result($score);
