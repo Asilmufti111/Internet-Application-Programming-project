@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -21,8 +21,27 @@ if (!$email || $score < 0) {
     exit;
 }
 
-$stmt = $conn->prepare("INSERT INTO quiz_results (email, score) VALUES (?, ?)");
-$stmt->bind_param("si", $email, $score);
+// Check if a record with the email already exists
+$check = $conn->prepare("SELECT id FROM quiz_results WHERE email = ? ");
+$check->bind_param("s", $email);
+$check->execute();
+$check->store_result();
+
+if ($check->num_rows > 0) {
+    // Record exists, update it
+    $check->bind_result($existing_id);
+    $check->fetch();
+    $check->close();
+
+    $stmt = $conn->prepare("UPDATE quiz_results SET score = ? WHERE id = ?");
+    $stmt->bind_param("ii", $score, $existing_id);
+} else {
+    // No previous score, insert new
+    $check->close();
+    $stmt = $conn->prepare("INSERT INTO quiz_results (email, score) VALUES (?, ?)");
+    $stmt->bind_param("si", $email, $score);
+}
+
 
 if ($stmt->execute()) {
     echo "Quiz score saved successfully.";
