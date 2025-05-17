@@ -1,34 +1,48 @@
-<!-- 
-    Names: Asil Mufti, Hayat Alzahrani, Shrooq Kaabi
-    IDs: 2106122, 2105101, 2205003
-    Section: IAR
-    Date: 20-05-2025
+<!-- Names: Asil Mufti , Hayat Alzahrani , shrooq Kaabi
+ IDs: 2106122 , 2105101 , 2205003
+ Section: IAR
+ Date: 22- 3- 2025
 -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Meta Info -->
+    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Islamic Quizzes - Al-Noor</title>
     <link rel="stylesheet" href="../global/main.css">
 </head>
+
 <body>
 
-    <!-- Include Header and Navigation -->
-    <?php include('../includes/header.php'); ?>
-    <?php include('../includes/links.php'); ?>
+    <!-- Header -->
+    <div id="header">
+        <h1>Islamic Quizzes</h1>
+        <p>Test your knowledge of Islam</p>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav">
+        <ul>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="services.php">Services</a></li>
+            <li><a href="feedback.php">Feedback</a></li>
+        </ul>
+    </div>
 
     <!-- Quiz Section -->
     <div id="container">
         <div style="text-align: center; margin: 20px;">
+            <!-- in xampp press ctrl+shift+R to refresh correctly -->
             <label for="quizEmail"><strong>Enter your email to start the quiz:</strong></label><br>
             <input type="email" id="quizEmail" placeholder="example@example.com" required>
             <br><br>
             <button class="btn" onclick="startQuiz()">Start Quiz</button>
         </div>
         <p id="previous-score" style="text-align:center; font-weight:bold;"></p>
+
 
         <div id="quizContent" style="display: none;">
             <section class="quiz-section">
@@ -62,17 +76,17 @@
 
                 <p id="quiz-result"></p>
                 <button class="btn" onclick="submitResult()">Submit My Score</button>
-                <button class="btn" id="restart-btn" style="display: none;" onclick="restartQuiz()">Restart Quiz</button>
             </section>
         </div>
     </div>
 
-    <!-- Include Footer -->
-    <?php include('../includes/footer.php'); ?>
-
-    <!-- External JS Scripts -->
+    <!-- Footer -->
+     <?php include "../includes/footer.php"; ?>
+    <!-- Scripts at the end of body -->
     <script src="../scripts/quiz_logic.js"></script>
     <script src="../scripts/submit_score.js"></script>
 
 </body>
 </html>
+
+

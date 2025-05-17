@@ -9,10 +9,11 @@
 <body>
 
   <!-- Include Header -->
-  <?php include('../includes/header.php'); ?>
+  <?php include "../includes/header.php"; ?>
 
   <!-- Include Navigation -->
-  <?php include('../includes/links.php'); ?>
+<
+<?php include "../includes/links.php"; ?>
 
   <!-- Contact Form Content -->
   <div id="content">
@@ -41,7 +42,8 @@
   </div>
 
   <!-- Include Footer -->
-  <?php include('../includes/footer.php'); ?>
-
+   <footer>
+   <?php include "../includes/footer.php"; ?>
+</footer>
 </body>
 </html>

@@ -8,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Info -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Prayer Schedule - Al-Noor</title>
 
     <!-- CSS -->
@@ -20,8 +18,8 @@
 <body>
 
     <!-- Include Header & Navigation -->
-    <?php include('../includes/header.php'); ?>
-    <?php include('../includes/links.php'); ?>
+    <?php include "../includes/header.php"; ?>
+    <?php include "../includes/links.php"; ?>
 
     <!-- Content Section -->
     <div id="content">
@@ -70,7 +68,7 @@
     </div>
 
     <!-- Include Footer -->
-    <?php include('../includes/footer.php'); ?>
+    <?php include "../includes/footer.php"; ?>
 
     <!-- JavaScript -->
     <script src="../scripts/prayer-times.js"></script>

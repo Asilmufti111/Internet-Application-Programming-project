@@ -1,67 +1,122 @@
-<?php
-// feedback.php
-$pageTitle = "Feedback - Al-Noor";
-include 'header.php';
-?>
+<!--
+    Names: Asil Mufti, Hayat Alzahrani, Shrooq Kaabi
+    IDs: 2106122, 2105101, 2205003
+    Section: IAR
+    Date: 22-03-2025
+-->
 
+<!DOCTYPE html>
+<html lang="en">
+<script src="../scripts/validation.js"></script>
+<script src="../scripts/POST.js"></script>
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback - Al-Noor</title> <!-- Title of the webpage that shows on the browser tab -->
+
+    <!-- Linking the CSS files to style the page -->
+    <link rel="stylesheet" href="../global/main.css"> <!-- Global styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- FontAwesome for icons -->
+
+</head>
+
+
+<body>
+
+    <!-- Header Section: Main heading and subtitle of the page -->
     <div id="header">
-        <h1>Feedback</h1>
-        <p>We value your feedback! Let us know how we can improve.</p>
+        <h1>Feedback</h1> <!-- Title of the feedback page -->
+        <p>We value your feedback! Let us know how we can improve.</p> <!-- Subtitle -->
     </div>
 
-<?php include 'nav.php'; ?>
+    <!-- Navigation Menu: Links to other pages on the website -->
+    <div id="nav">
+        <ul>
+            <li><a href="../index.php">Home</a></li> <!-- Link to the Home page -->
+            <li><a href="about.php">About</a></li> <!-- Link to the About page -->
+            <li><a href="services.php">Services</a></li> <!-- Link to the Services page -->
+            <li><a href="feedback.php">Feedback</a></li> <!-- Link to the Feedback page -->
+        </ul>
+    </div>
 
+    <!-- Feedback Form Section: Collects user's feedback -->
     <div id="content">
         <div id="feedback-form">
-            <h2>Share Your Thoughts</h2>
+            <h2>Share Your Thoughts</h2> <!-- Heading for the feedback form -->
 
+            <!-- The form collects user information, ratings, preferences, and additional comments -->
             <form id="feedback">
 
+                <!-- Section 1: Personal Information -->
                 <fieldset>
-                    <legend>Personal Information</legend>
+                    <legend>Personal Information</legend> <!-- Title for this section -->
 
+                    <!-- User Name Input -->
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required> <!-- Input field for the user's name -->
 
+                    <!-- User Email Input -->
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                    <!-- Input field for email -->
                 </fieldset>
 
+                <!-- Section 2: Feedback Details -->
                 <fieldset>
-                    <legend>Feedback Details</legend>
+                    <legend>Feedback Details</legend> <!-- Title for this section -->
 
+                    <!-- User Rating: Options to rate the website -->
                     <label>User Rating:</label>
                     <div class="radio-group">
-                        <input type="radio" id="rating1" name="rating" value="Excellent" required>
-                        <label for="rating1">Excellent</label>
-
-                        <input type="radio" id="rating2" name="rating" value="Good">
-                        <label for="rating2">Good</label>
-
-                        <input type="radio" id="rating3" name="rating" value="Average">
-                        <label for="rating3">Average</label>
-
-                        <input type="radio" id="rating4" name="rating" value="Poor">
-                        <label for="rating4">Poor</label>
+                        <label><input type="radio" name="rating" value="Good"> Good</label>
+                        <!-- Radio button for 'Good' rating -->
+                        <label><input type="radio" name="rating" value="Average"> Average</label>
+                        <!-- Radio button for 'Average' rating -->
+                        <label><input type="radio" name="rating" value="Poor"> Poor</label>
+                        <!-- Radio button for 'Poor' rating -->
                     </div>
 
-                    <label for="favorite">Favorite Feature:</label>
-                    <select id="favorite" name="favorite" required>
-                        <option value="">Select a feature</option>
-                        <option value="Quran and Tafsir">Quran and Tafsir</option>
-                        <option value="Prayer Schedule">Prayer Schedule</option>
+                    <!-- Services Used: Options to select which services were used -->
+                    <label>Services Used:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="services[]" value="Quran and Tafsir"> Quran and Tafsir</label>
+                        <!-- Checkbox for Quran and Tafsir -->
+                        <label><input type="checkbox" name="services[]" value="Prayer Schedule"> Prayer Schedule</label>
+                        <!-- Checkbox for Prayer Schedule -->
+                        <label><input type="checkbox" name="services[]" value="Quizzes to test knowledge"> Quizzes to test
+                            knowledge</label> <!-- Checkbox for Quizzes -->
+                        <label><input type="checkbox" name="services[]" value="Donation Sites"> Donation Sites</label>
+                        <!-- Checkbox for Donation Sites -->
+                    </div>
+
+                    <!-- Preferred Service: Dropdown list to choose the preferred service -->
+                    <label for="preferences">Preferred service:</label>
+                    <select id="preferences" name="preferences">
+                        <option value="Quran and Tafsir">Quran and Tafsir</option> <!-- Option for Quran and Tafsir -->
+                        <option value="Prayer Schedule">Prayer Schedule</option> <!-- Option for Prayer Schedule -->
                         <option value="Quizzes to Test Knowledge">Quizzes to Test Knowledge</option>
-                        <option value="Donation">Donation</option>
-                        <option value="Useful Videos">Useful Videos</option>
+                        <!-- Option for Quizzes -->
+                        <option value="Donation">Donation</option> <!-- Option for Donation -->
+                        <option value="Useful Videos">Useful Videos</option> <!-- Option for Useful Videos -->
                     </select>
 
+                    <!-- Additional Comments: Text area for any extra comments or suggestions -->
                     <label for="message"><br> Additional Comments:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
+                    <!-- Textarea for additional comments -->
                 </fieldset>
 
+                <!-- Submit Button: Submits the form -->
                 <button type="submit" class="btn">Submit</button>
             </form>
         </div>
     </div>
 
-<?php include 'footer.php'; ?>
+    <!-- Footer Section: Contact details and copyright information -->
+   <?php include "../includes/footer.php"; ?>
+</body>
+
+</html>
