@@ -13,7 +13,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <li><a href="../pages/quran_tafsir.php">Quran & Tafsir</a></li>
                 <li><a href="../pages/schedule.php">Prayer Schedule</a></li>
                 <li><a href="../pages/quizzes.php">Quizzes</a></li>
-                <li><a href="../pages/donations.php">Donations</a></li>
+                <li><a href="../pages/Donations.php">Donations</a></li>
                 <li><a href="../pages/videos.php">Useful Videos</a></li>
                 <li><a href="../pages/pdfs.php">Educational Resources</a></li>
             </ul>
