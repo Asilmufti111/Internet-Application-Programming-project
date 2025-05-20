@@ -1,6 +1,7 @@
 /* Hide unnecessary elements when printing */
 #header, #nav, #footer {
     display: none;
+    visibility: hidden;
 }
 
 /* Ensure only the table content is printed */
