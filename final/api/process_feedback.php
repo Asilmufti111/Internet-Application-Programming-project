@@ -88,7 +88,7 @@ if ($check_query->num_rows > 0) {
     $msg = "This email has already submitted feedback. Only one entry is allowed.";
     echo $isApi
         ? json_encode(["error" => $msg])
-        : "<script>alert('$msg'); window.location.href = '../pages/feedback.html';</script>";
+        : "<script>alert('$msg'); window.location.href = '../pages/feedback.php';</script>";
     $check_query->close();
     $conn->close();
     exit();
@@ -104,7 +104,7 @@ if ($stmt->execute()) {
     $success = "Thank you for your feedback!";
     echo $isApi
         ? json_encode(["message" => $success])
-        : "<script>alert('$success'); window.location.href = '../pages/feedback.html';</script>";
+        : "<script>alert('$success'); window.location.href = '../pages/feedback.php';</script>";
           exit();
 } else {
     $error = "Error: " . $stmt->error;
