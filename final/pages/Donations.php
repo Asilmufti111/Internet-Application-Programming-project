@@ -17,7 +17,6 @@
 
     <!-- Linking the CSS files to style the page -->
     <link rel="stylesheet" href="../global/main.css"> <!-- Global styles -->
-    <link rel="stylesheet" href="donations.css"> <!-- Specific styles for this page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- FontAwesome for icons -->
 </head>
 
