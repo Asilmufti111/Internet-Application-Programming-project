@@ -33,7 +33,7 @@
   const response = JSON.parse(text); // convert manually
   if (response.message) {
     alert(response.message);
-    window.location.href = "../pages/feedback.html";
+    window.location.href = "../pages/feedback.php";
   } else if (response.error) {
     alert("Error: " + response.error);
   }
