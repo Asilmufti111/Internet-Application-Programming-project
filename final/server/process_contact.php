@@ -35,7 +35,7 @@ if ($check->num_rows === 0) {
   // No feedback found, redirect to feedback page
   echo "<script>
     alert('Please provide feedback first so we can better understand your needs.');
-    window.location.href = '../pages/feedback.html';
+    window.location.href = '../pages/feedback.php';
   </script>";
   $check->close();
   $conn->close();
@@ -50,7 +50,7 @@ $stmt->bind_param("sss", $email, $subject, $message);
 if ($stmt->execute()) {
   echo "<script>
     alert('Message sent successfully!');
-    window.location.href = '../pages/contact.html';
+    window.location.href = '../pages/contact.php';
   </script>";
 } else {
   echo "Error: " . $stmt->error;
