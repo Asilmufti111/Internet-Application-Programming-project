@@ -18,24 +18,23 @@
 <body>
 
     <!-- Header -->
-   <?php include "../includes/header.php"; ?>
+    <?php include "../includes/header.php"; ?>
     <!-- Navigation -->
-  <?php include "../includes/links.php"; ?>
+    <?php include "../includes/links.php"; ?>
 
     <!-- Quiz Section -->
-    <div id="container">
+    <div id="quiz-page-container">
         <h2>Islamic Quizzes</h2>
-        <div style="text-align: center; margin: 20px;">
+        <div class="quiz-section">
             <!-- in xampp press ctrl+shift+R to refresh correctly -->
             <label for="quizEmail"><strong>Enter your email to start the quiz:</strong></label><br>
             <input type="email" id="quizEmail" placeholder="example@example.com" required>
             <br><br>
             <button class="btn" onclick="startQuiz()">Start Quiz</button>
         </div>
-        <p id="previous-score" style="text-align:center; font-weight:bold;"></p>
+        <p id="previous-score"></p>
 
-
-        <div id="quizContent" style="display: none;">
+        <div id="quizContent" class="hidden">
             <section class="quiz-section">
                 <h2 class="quiz-title">Islamic Knowledge Quiz</h2>
                 <p>Choose the correct answer for each question and test your understanding.</p>
@@ -67,18 +66,16 @@
 
                 <p id="quiz-result"></p>
                 <button class="btn" onclick="submitResult()">Submit My Score</button>
-             <button class="btn" id="restart-btn" onclick="restartQuiz()" style="display: none;">Restart</button>
+                <button class="btn" id="restart-btn" onclick="restartQuiz()" style="display: none;">Restart</button>
             </section>
         </div>
     </div>
 
     <!-- Footer -->
-     <?php include "../includes/footer.php"; ?>
+    <?php include "../includes/footer.php"; ?>
     <!-- Scripts at the end of body -->
     <script src="../scripts/quiz_logic.js"></script>
     <script src="../scripts/submit_score.js"></script>
 
 </body>
 </html>
-
-
