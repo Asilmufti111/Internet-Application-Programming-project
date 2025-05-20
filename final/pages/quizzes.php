@@ -67,6 +67,7 @@
 
                 <p id="quiz-result"></p>
                 <button class="btn" onclick="submitResult()">Submit My Score</button>
+             <button class="btn" id="restart-btn" onclick="restartQuiz()" style="display: none;">Restart</button>
             </section>
         </div>
     </div>
