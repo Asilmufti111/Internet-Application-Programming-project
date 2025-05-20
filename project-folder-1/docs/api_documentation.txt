@@ -1,0 +1,107 @@
+api\_documentation.txt
+
+Project Name: Al-Noor Web API
+File Location: /api/process_feedback.php
+
+
+This RESTful API allows users to:
+
+* Submit feedback (via HTML form or JSON POST request)
+* Retrieve all submitted feedback (via GET request)
+
+
+
+Endpoints
+
+1. Submit Feedback (POST)
+
+Endpoint URL:
+  https://alnoorpro.com/api/process_feedback.php
+
+Method:
+
+
+Content-Type:
+  application/json (for API usage)
+  application/x-www-form-urlencoded (for HTML form)
+
+Body Parameters (JSON):
+
+
+{
+  "name": "Ali Ahmed",
+  "email": "ali@example.com",
+  "feedback": "Great service!",
+  "rating": "Good",
+  "services_used": ["Quran and Tafsir", "Prayer Schedule"],
+  "preferred_service": "Quran and Tafsir"
+}
+
+
+Success Response:
+
+
+{
+  "message": "Thank you for your feedback!"
+}
+
+
+Error Responses:
+
+
+{
+  "error": "Please fill in all required fields."
+}
+
+
+
+{
+  "error": "This email has already submitted feedback. Only one entry is allowed."
+}
+
+
+---
+
+ 2. Get All Feedback (GET)
+
+Endpoint URL:
+  https://alnoorpro.com/api/process_feedback.php
+
+Method:
+  GET
+
+Response Format:
+  application/json
+
+Sample Response:
+
+
+[
+  {
+    "id": 1,
+    "name": "Ali Ahmed",
+    "email": "ali@example.com",
+    "rating": "Good",
+    "services_used": "Quran and Tafsir, Prayer Schedule",
+    "preferred_service": "Quran and Tafsir",
+    "comments": "Great service!",
+    "submitted_at": "2025-05-12 15:30:00"
+  },
+  {
+    "id": 2,
+    "name": "Layla Saeed",
+    "email": "layla@example.com",
+    "rating": "Average",
+    "services_used": "Quizzes to Test Knowledge",
+    "preferred_service": "Useful Videos",
+    "comments": "Informative quizzes.",
+    "submitted_at": "2025-05-13 10:15:22"
+  }
+]
+
+
+Notes:
+
+* Only one feedback submission is allowed per email.
+* All responses are in JSON format.
+* Data is saved in the form table in the MySQL database.
